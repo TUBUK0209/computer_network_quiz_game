@@ -1,0 +1,129 @@
+/* 基本的なスタイル */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* クイズ全体のコンテナ */
+.quiz-container {
+    background-color: white;
+    padding: 2rem 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px;
+    transition: all 0.3s ease;
+}
+
+/* 問題番号 */
+#quiz-number {
+    color: #5a67d8;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 問題文 */
+#question {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* 選択肢ボタン */
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    margin: 0.5rem 0;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #f7fafc;
+    border-color: #5a67d8;
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+}
+
+/* 正解・不正解時のスタイル */
+.option-btn.correct {
+    background-color: #c6f6d5; /* 緑色 */
+    border-color: #38a169;
+    color: #2f855a;
+    font-weight: bold;
+}
+
+.option-btn.incorrect {
+    background-color: #fed7d7; /* 赤色 */
+    border-color: #e53e3e;
+    color: #c53030;
+    font-weight: bold;
+}
+
+/* フィードバックエリア（正解/不正解のテキスト用） */
+#feedback-container {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* 解説エリア */
+#explanation-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #edf2f7;
+    border-left: 5px solid #718096;
+    line-height: 1.7;
+}
+
+/* 次へ進むボタン / もう一度挑戦するボタン */
+#next-btn, #retry-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #5a67d8;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#next-btn:hover, #retry-btn:hover {
+    background-color: #4c51bf;
+}
+
+/* 結果表示エリア */
+#result-container {
+    text-align: center;
+}
+
+#score-text {
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+}
+
+/* ユーティリティクラス */
+.hidden {
+    display: none;
+}

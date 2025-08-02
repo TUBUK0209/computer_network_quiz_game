@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コンピュータネットワーク クイズ</title>
+    <!-- CSSファイルへのリンク -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- クイズ全体のコンテナ -->
+    <div class="quiz-container">
+        <!-- 問題番号表示エリア -->
+        <h2 id="quiz-number"></h2>
+        <!-- 問題文表示エリア -->
+        <p id="question">クイズを読み込んでいます...</p>
+        <!-- 選択肢ボタンのコンテナ -->
+        <div id="options-container">
+            <!-- 選択肢ボタンはJavaScriptによって動的に生成されます -->
+        </div>
+        <!-- 正解・不正解のフィードバック表示エリア -->
+        <div id="feedback-container"></div>
+        <!-- 解説文表示エリア -->
+        <div id="explanation-container"></div>
+        <!-- 次の問題へ進むボタン（初期状態は非表示） -->
+        <button id="next-btn" class="hidden">次の問題へ</button>
+    </div>
+
+    <!-- 最終結果表示エリア（初期状態は非表示） -->
+    <div id="result-container" class="hidden">
+        <h2>クイズ終了！</h2>
+        <p id="score-text"></p>
+        <button id="retry-btn">もう一度挑戦する</button>
+    </div>
+
+    <!-- JavaScriptファイルへのリンク -->
+    <script src="script.js"></script>
+</body>
+</html>

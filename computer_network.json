@@ -1,0 +1,818 @@
+[
+  {
+    "id": 1,
+    "question": "ネットワークをその地理的な規模によって分類した場合、一つの建物内や大学のキャンパス内など、比較的限定された範囲を接続するネットワークは次のうちどれか。",
+    "options": [
+      { "label": "a", "text": "LAN (Local Area Network)" },
+      { "label": "b", "text": "MAN (Metropolitan Area Network)" },
+      { "label": "c", "text": "WAN (Wide Area Network)" },
+      { "label": "d", "text": "PAN (Personal Area Network)" }
+    ],
+    "answer": "a",
+    "explanation": "LANは、限定された狭い範囲のネットワークを指します。MANは都市圈規模、WANは国全体や大陸間などの広域を指します。PANは個人が利用する数メートル程度のさらに狭い範囲のネットワーク (例: Bluetooth)です。したがって、設問の条件に最も合致するのはLANです。"
+  },
+  {
+    "id": 2,
+    "question": "異なるネットワーク同士を相互に接続し、パケットの宛先IPアドレス情報を基に、最適な転送経路を判断してパケットを中継する役割を持つ通信機器はどれか。",
+    "options": [
+      { "label": "a", "text": "スイッチ (ハブ)" },
+      { "label": "b", "text": "ルータ" },
+      { "label": "c", "text": "モデム" },
+      { "label": "d", "text": "リピータ" }
+    ],
+    "answer": "b",
+    "explanation": "ルータは、TCP/IP モデルのネットワーク層 (第3層) で動作し、IPアドレスを見て経路選択(ルーティング)を行います。スイッチはデータリンク層 (第2層)でMACアドレスを見て転送し、リピータやハブは物理層 (第1層)で信号を増幅・分配するだけです。モデムはデジタル信号とアナログ信号を相互に変換する装置です。"
+  },
+  {
+    "id": 3,
+    "question": "通信方式の一つで、通信を開始する前に送信元と宛先の間に物理的または論理的な通信路(回線)を確立し、通信終了までその回線を占有する方式はどれか。",
+    "options": [
+      { "label": "a", "text": "パケット交換方式" },
+      { "label": "b", "text": "ATM 交換方式" },
+      { "label": "c", "text": "回線交換方式" },
+      { "label": "d", "text": "フレームリレー方式" }
+    ],
+    "answer": "c",
+    "explanation": "回線交換方式は、通信中に回線を占有するため、帯域が保証され遅延が一定になる利点がありますが、回線の利用効率が低いという欠点もあります。代表例はアナログ電話網です。一方、パケット交換方式は回線を共有するため効率的ですが、品質は保証されません。"
+  },
+  {
+    "id": 4,
+    "question": "現在のインターネットで中心的に用いられている、送信するデータを「パケット」と呼ばれる小さな単位に分割し、それぞれに宛先アドレスなどの制御情報を付加して送信する方式はどれか。",
+    "options": [
+      { "label": "a", "text": "パケット交換方式" },
+      { "label": "b", "text": "回線交換方式" },
+      { "label": "c", "text": "メッセージ交換方式" },
+      { "label": "d", "text": "トークンパッシング方式" }
+    ],
+    "answer": "a",
+    "explanation": "パケット交換方式は、回線を複数のユーザで共有できるため、回線利用効率が非常に高いという特徴があります。各パケットは独立してネットワーク内を転送され、宛先で元のデータに再構築されます。"
+  },
+  {
+    "id": 5,
+    "question": "インターネットに代表されるパケット交換ネットワークが提供するサービス品質モデルで、「最大限の努力はするが、通信速度、遅延、パケットの到達などを保証するものではない」という考え方を示す用語はどれか。",
+    "options": [
+      { "label": "a", "text": "ギャランティ型" },
+      { "label": "b", "text": "QoS (Quality of Service)" },
+      { "label": "c", "text": "SLA (Service Level Agreement)" },
+      { "label": "d", "text": "ベストエフォート型" }
+    ],
+    "answer": "d",
+    "explanation": "ベストエフォートは「最善努力」を意味し、品質を保証しない代わりに安価で手軽なネットワークを実現する基本モデルです。ギャランティ型は品質を保証するサービス、QoS は通信の品質を制御する技術全般、SLAは事業者と利用者の間の品質保証契約を指します。"
+  },
+  {
+    "id": 6,
+    "question": "ネットワークにおける通信の宛先指定方法のうち、特定のグループに属している複数の特定の相手に対して、一度の送信処理で同じデータを届ける方式はどれか。",
+    "options": [
+      { "label": "a", "text": "ユニキャスト" },
+      { "label": "b", "text": "マルチキャスト" },
+      { "label": "c", "text": "ブロードキャスト" },
+      { "label": "d", "text": "エニーキャスト" }
+    ],
+    "answer": "b",
+    "explanation": "マルチキャストは「1対特定の多」の通信です。ユニキャストは「1対1」、ブロードキャストは「1対不特定多数 (同一ネットワーク内の全員)」、エニーキャストは「グループ内の最も近い1台」への通信を指します。"
+  },
+  {
+    "id": 7,
+    "question": "TCP/IPなどのネットワークプロトコルを階層(レイヤ) 構造で設計することの最も大きな利点として、適切なものはどれか。",
+    "options": [
+      { "label": "a", "text": "通信処理のオーバーヘッドが減り、通信速度が向上する。" },
+      { "label": "b", "text": "プロトコルの仕様が単純になり、実装が容易になる。" },
+      { "label": "c", "text": "各階層が独立しているため、ある階層の技術的変更が他の階層に影響を与えにくい。" },
+      { "label": "d", "text": "ネットワーク全体の構成を直感的に理解できるようになる。" }
+    ],
+    "answer": "c",
+    "explanation": "階層化の最大の利点は、各層の独立性 (モジュール性)です。これにより、例えば物理的な伝送媒体が無線LANから光ファイバーに変わっても、アプリケーション層のHTTPなどは一切変更する必要がありません。この柔軟性が技術の進歩を容易にしています。aは誤りで、ヘッダ付加によりオーバーヘッドはむしろ増えます。"
+  },
+  {
+    "id": 8,
+    "question": "送信側のコンピュータで、アプリケーション層から下位の層へデータが渡される際に行われる処理はどれか。",
+    "options": [
+      { "label": "a", "text": "カプセル化 (Encapsulation)" },
+      { "label": "b", "text": "非カプセル化 (Decapsulation)" },
+      { "label": "c", "text": "フラグメンテーション (Fragmentation)" },
+      { "label": "d", "text": "アドレッシング (Addressing)" }
+    ],
+    "answer": "a",
+    "explanation": "上位層から渡されたデータに、その層で必要な制御情報 (ヘッダ)を付加していく処理を「カプセル化」と呼びます。受信側では、下位層から順にヘッダを取り除いていく「非カプセル化」が行われます。"
+  },
+  {
+    "id": 9,
+    "question": "アプリケーション層に分類されるプロトコルのうち、主にドメイン名とIPアドレスを対応付ける「名前解決」のために使用されるものはどれか。",
+    "options": [
+      { "label": "a", "text": "FTP (File Transfer Protocol)" },
+      { "label": "b", "text": "SMTP (Simple Mail Transfer Protocol)" },
+      { "label": "c", "text": "HTTP (Hyper Text Transfer Protocol)" },
+      { "label": "d", "text": "DNS (Domain Name System)" }
+    ],
+    "answer": "d",
+    "explanation": "DNSは、人間が覚えやすい 「www.example.com」のようなドメイン名を、コンピュータが通信に使う 「192.0.2.1」のようなIPアドレスに変換する役割を担います。FTPはファイル転送、SMTPはメール送信、HTTPはWeb ページの閲覧に使われます。"
+  },
+  {
+    "id": 10,
+    "question": "トランスポート層のプロトコルで、通信の信頼性を確保するために、コネクションの確立、確認応答(ACK)、再送制御などの機能を持つものはどれか。",
+    "options": [
+      { "label": "a", "text": "TCP (Transmission Control Protocol)" },
+      { "label": "b", "text": "UDP (User Datagram Protocol)" },
+      { "label": "c", "text": "IP (Internet Protocol)" },
+      { "label": "d", "text": "ARP (Address Resolution Protocol)" }
+    ],
+    "answer": "a",
+    "explanation": "TCPは、データが確実に、順序通りに、重複なく相手に届くことを保証する信頼性の高いプロトコルです。一方、UDPは信頼性よりも速度やリアルタイム性を重視します。IPはネットワーク層、ARPはデータリンク層で機能するプロトコルです。"
+  },
+  {
+    "id": 11,
+    "question": "インターネットの技術仕様などを公開する文書シリーズであり、例えばTCPの仕様は「RFC 793」として定義されている、この文書シリーズの名称は何か。",
+    "options": [
+      { "label": "a", "text": "IEEE 802" },
+      { "label": "b", "text": "ISO/IEC" },
+      { "label": "c", "text": "RFC (Request for Comments)" },
+      { "label": "d", "text": "W3C Recommendation" }
+    ],
+    "answer": "c",
+    "explanation": "RFCは、IETF (Internet Engineering Task Force) によって発行される、インターネット関連技術の仕様や議論を記録した文書群です。「コメント募集」という名前が示す通り、オープンな議論を促す文化から生まれました。IEEE 802は主にLAN技術、ISO/IECは国際標準、W3CはWeb技術の標準化団体です。"
+  },
+  {
+    "id": 12,
+    "question": "「半導体集積回路上のトランジスタ数は約1.5年~2年で倍増する」という経験則で、コンピュータの処理能力の指数関数的な向上を示唆した法則は何か。",
+    "options": [
+      { "label": "a", "text": "メトカーフの法則" },
+      { "label": "b", "text": "ギルダーの法則" },
+      { "label": "c", "text": "パーキンソンの法則" },
+      { "label": "d", "text": "ムーアの法則" }
+    ],
+    "answer": "d",
+    "explanation": "ムーアの法則は、Intel社の共同創業者ゴードン・ムーアによって提唱されました。この法則に沿ったコンピュータの性能向上が、今日の高度なネットワーク社会の基盤となっています。ギルダーの法則は通信帯域幅の増大、メトカーフの法則はネットワークの価値に関するものです。"
+  },
+  {
+    "id": 13,
+    "question": "Webページなどの情報リソースを、Webブラウザ (クライアント) とWeb サーバ間でやり取りするために用いられる、アプリケーション層のプロトコルはどれか。",
+    "options": [
+      { "label": "a", "text": "HTML" },
+      { "label": "b", "text": "HTTP" },
+      { "label": "c", "text": "URL" },
+      { "label": "d", "text": "WWW" }
+    ],
+    "answer": "b",
+    "explanation": "HTTP(Hyper Text Transfer Protocol)は、WWW (World Wide Web) という情報システムを利用するための通信規約 (プロトコル)です。HTMLは文書を記述する言語、URLはリソースの場所を示す住所、WWWは情報システムそのものを指し、それぞれ役割が異なります。"
+  },
+  {
+    "id": 14,
+    "question": "ネットワークのアーキテクチャの一つで、サービスを提供する専門の「サーバ」と、それを利する「クライアント」という役割が明確に分離されている方式を何と呼ぶか。",
+    "options": [
+      { "label": "a", "text": "P2P (Peer-to-Peer)方式" },
+      { "label": "b", "text": "分散処理方式" },
+      { "label": "c", "text": "サーバ・クライアント方式" },
+      { "label": "d", "text": "ターミナルホスト方式" }
+    ],
+    "answer": "c",
+    "explanation": "サーバ・クライアント方式は、現代のインターネットサービスの多く(Web、電子メールなど)で採用されている基本的な構成です。一方、P2P方式では、各コンピュータが対等な立場でサーバとクライアント両方の役割を担います。"
+  },
+  {
+    "id": 15,
+    "question": "インターネット上のリソース (Webページやファイルなど)の場所を一意に特定するための、‘http://www.example.com/index.html のような形式で記述される統一的な書式は何か。",
+    "options": [
+      { "label": "a", "text": "URI (Uniform Resource Identifier)" },
+      { "label": "b", "text": "URN (Uniform Resource Name)" },
+      { "label": "c", "text": "URL (Uniform Resource Locator)" },
+      { "label": "d", "text": "DNS (Domain Name System)" }
+    ],
+    "answer": "c",
+    "explanation": "URLはリソースの「場所 (Locator)」 を指し示すものです。URIはURLとURNを含むより広い概念で、リソースを識別するものの総称です。URNはリソースの「名前(Name)」を一意に定めるものですが、一般的にはURLが最もよく使われます。"
+  },
+  {
+    "id": 16,
+    "question": "人間が覚えやすいドメイン名 (例:www.example.com)と、コンピュータが通信で用いるIPアドレス (例: 192.0.2.1) を相互に変換する、階層的な分散データベースシステムは何か。",
+    "options": [
+      { "label": "a", "text": "DHCP (Dynamic Host Configuration Protocol)" },
+      { "label": "b", "text": "ARP (Address Resolution Protocol)" },
+      { "label": "c", "text": "DNS (Domain Name System)" },
+      { "label": "d", "text": "NAT (Network Address Translation)" }
+    ],
+    "answer": "c",
+    "explanation": "DNSは、インターネットの「電話帳」や「住所録」に例えられ、ドメイン名からIPアドレスを調べる 「名前解決」を行います。DHCPはIPアドレスの自動割り当て、ARPはIPアドレスから MACアドレスの解決、NATはIPアドレスの変換を行うプロトコルです。"
+  },
+  {
+    "id": 17,
+    "question": "一般的なDNSの名前解決において、利用者のPC (ホスト) が最初にIPアドレスの問い合わせを行う相手は誰か。",
+    "options": [
+      { "label": "a", "text": "ルート DNS サーバ" },
+      { "label": "b", "text": "権威 DNSサーバ" },
+      { "label": "c", "text": "ローカル DNS サーバ (キャッシュDNS サーバ)" },
+      { "label": "d", "text": "WWWサーバ" }
+    ],
+    "answer": "c",
+    "explanation": "利用者のPCは、自身に設定されたローカル DNSサーバにまず問い合わせます。ローカルDNSサーバは、PCの代わりにルート DNS サーバから順に階層をたどってIPアドレスを調べ、その結果をPCに返します。"
+  },
+  {
+    "id": 18,
+    "question": "電子メールを送信したり、メールサーバ間で転送したりするために用いられるプロトコルはどれか。",
+    "options": [
+      { "label": "a", "text": "POP3" },
+      { "label": "b", "text": "IMAP4" },
+      { "label": "c", "text": "SMTP" },
+      { "label": "d", "text": "HTTP" }
+    ],
+    "answer": "c",
+    "explanation": "SMTP (Simple Mail Transfer Protocol)は、メールの「送信・転送」を担います。一方、POP3やIMAP4は、メールサーバからメールを「受信」するために使われるプロトコルです。"
+  },
+  {
+    "id": 19,
+    "question": "Telnet や FTPが持つセキュリティ上の脆弱性を解決するため、通信経路を暗号化する機能を持つプロトコル群が開発された。Telnet の代替として現在標準的に用いられる、安全なリモートログインプロトコルはどれか。",
+    "options": [
+      { "label": "a", "text": "SFTP" },
+      { "label": "b", "text": "FTPS" },
+      { "label": "c", "text": "HTTPS" },
+      { "label": "d", "text": "SSH" }
+    ],
+    "answer": "d",
+    "explanation": "SSH (Secure Shell)は、通信を暗号化し、安全なリモートシェル操作を実現します。SFTP FTPSはFTPの代替となる安全なファイル転送プロトコル、HTTPS は HTTPの代替となる安全なWeb アクセスプロトコルです。"
+  },
+  {
+    "id": 20,
+    "question": "コンピュータ内で動作している特定のアプリケーション (プロセス)を識別するための番号であり、TCPやUDPのヘッダに含まれる情報はどれか。",
+    "options": [
+      { "label": "a", "text": "IP アドレス" },
+      { "label": "b", "text": "MACアドレス" },
+      { "label": "c", "text": "ポート番号" },
+      { "label": "d", "text": "ソケット" }
+    ],
+    "answer": "c",
+    "explanation": "ポート番号は、IPアドレスで特定されたコンピュータ内で、どのアプリケーションにデータを渡すかを決定するための番号です。IPアドレスが「建物の住所」なら、ポート番号は「部屋番号」に例えられます。ソケットはIPアドレスとポート番号の組み合わせを指すことが多いです。"
+  },
+  {
+    "id": 21,
+    "question": "FTP (File Transfer Protocol) が使用する2つのポートのうち、クライアントとサーバ間でコマンドのやり取りを行う 「制御コネクション」で標準的に使用されるウェルノウンポート番号はどれか。",
+    "options": [
+      { "label": "a", "text": "20" },
+      { "label": "b", "text": "21" },
+      { "label": "c", "text": "22" },
+      { "label": "d", "text": "23" }
+    ],
+    "answer": "b",
+    "explanation": "FTPの制御コネクションではTCPの21番ポートが使用されます。実際のファイル転送を行うデータコネクションでは、アクティブモード時にサーバ側で20番ポートが使用されます。22番はSSH、23番は Telnet のポート番号です。"
+  },
+  {
+    "id": 22,
+    "question": "ウェルノウンポート番号に関する説明として、正しいものはどれか。",
+    "options": [
+      { "label": "a", "text": "0から 1023 までの範囲で、特定の有名なアプリケーションプロトコルのために予約されている。" },
+      { "label": "b", "text": "1024 から 49151 までの範囲で、各OSが任意にアプリケーションに割り当てる。" },
+      { "label": "c", "text": "49152 から 65535 までの範囲で、クライアント側が通信時に動的に使用する。" },
+      { "label": "d", "text": "すべてのポート番号は、先着順で自由に利用することができる。" }
+    ],
+    "answer": "a",
+    "explanation": "ウェルノウンポート番号は0番から1023番までと定められており、HTTP(80番)やSMTP (25番)など、広く使われるサーバアプリケーションのためにIANAによって管理されています。bは登録済みポート、cはダイナミック/プライベートポートの範囲です。"
+  },
+  {
+    "id": 23,
+    "question": "電子メールをメールサーバから受信するために使用されるプロトコルで、サーバ上にメールを残したまま複数の端末でメールを管理するのに適しているものはどれか。",
+    "options": [
+      { "label": "a", "text": "SMTP" },
+      { "label": "b", "text": "POP3" },
+      { "label": "c", "text": "IMAP4" },
+      { "label": "d", "text": "MIME" }
+    ],
+    "answer": "c",
+    "explanation": "IMAP4は、メールをサーバ側で管理する仕組みのため、PCやスマートフォンなど複数の端末からアクセスしてもメールの状態(既読・未読など)が同期されます。POP3は基本的にメールを端末にダウンロードするため、このような使い方には向きません。SMTP はメール送信、MIMEはメールで様々な形式のデータを扱うための規格です。"
+  },
+  {
+    "id": 24,
+    "question": "TCP が信頼性の高い通信を実現するための仕組みの組み合わせとして、最も適切なものはどれか。",
+    "options": [
+      { "label": "a", "text": "シーケンス番号、確認応答、再送制御" },
+      { "label": "b", "text": "ブロードキャスト、マルチキャスト、ユニキャスト" },
+      { "label": "c", "text": "ポート番号、IPアドレス、MACアドレス" },
+      { "label": "d", "text": "HTTP、FTP、DNS" }
+    ],
+    "answer": "a",
+    "explanation": "TCPの信頼性は、送信するデータに一連の「シーケンス番号」を付け、受信側が「確認応答(ACK)」を返すことで到達を確認し、ACKが返ってこない場合には「再送制御」を行うことで保証されます。これらはTCPの根幹をなす誤り制御の仕組みです。"
+  },
+  {
+    "id": 25,
+    "question": "TCP通信において、送信側が送信したパケットに対する確認応答 (ACK)が一定時間内に返ってこない場合に、パケットが喪失したと判断して再送を行う。この「一定時間」を何と呼ぶか。",
+    "options": [
+      { "label": "a", "text": "RTT (Round Trip Time)" },
+      { "label": "b", "text": "TTL (Time To Live)" },
+      { "label": "c", "text": "タイムアウト (Timeout)" },
+      { "label": "d", "text": "ウィンドウサイズ (Window Size)" }
+    ],
+    "answer": "c",
+    "explanation": "この時間を再送タイムアウト (RTO: Retransmission Timeout) と呼びます。TCPはこのタイムアウト値を、RTT(パケットの往復遅延時間)を基準に動的に調整しています。TTL は IPパケットがネットワーク内を生存できる時間 (ホップ数)です。"
+  },
+  {
+    "id": 26,
+    "question": "TCPの再送タイムアウト時間が、実際のネットワーク遅延に比べて短すぎると、どのような問題が発生するか。",
+    "options": [
+      { "label": "a", "text": "パケットロスが発生しても再送が遅れ、スループットが低下する。" },
+      { "label": "b", "text": "まだ届くはずのパケットを再送してしまい、不要なトラフィックでネットワークの輻輳を悪化させる。" },
+      { "label": "c", "text": "受信側のバッファがあふれ、パケットが破棄される。" },
+      { "label": "d", "text": "通信相手を特定できず、コネクションを確立できない。" }
+    ],
+    "answer": "b",
+    "explanation": "タイムアウトが短すぎると、単なる遅延をパケットロスと誤認し、不要な再送を多発させます。これによりネットワーク帯域が無駄に使われ、輻輳をさらに悪化させる原因となります。逆に長すぎると、aの記述のような問題が発生します。"
+  },
+  {
+    "id": 27,
+    "question": "TCPがコネクションを確立する際に行う、3回のパケット交換による一連の手順を何と呼ぶか。",
+    "options": [
+      { "label": "a", "text": "フロー制御" },
+      { "label": "b", "text": "輻輳制御" },
+      { "label": "c", "text": "スリーウェイ・ハンドシェイク" },
+      { "label": "d", "text": "スライディング・ウィンドウ" }
+    ],
+    "answer": "c",
+    "explanation": "スリーウェイ・ハンドシェイクは、クライアントが「SYN」を送り、サーバが 「SYN+ACK」を返し、最後にクライアントが「ACK」を返す3ステップで構成されます。これにより、双方が通信可能であることを確認し、シーケンス番号を同期させます。"
+  },
+  {
+    "id": 28,
+    "question": "TCPのコネクション確立 (スリーウェイ・ハンドシェイク)において、主に用いられるTCP ヘッダの制御フラグの組み合わせはどれか。",
+    "options": [
+      { "label": "a", "text": "SYN, ACK" },
+      { "label": "b", "text": "FIN, ACK" },
+      { "label": "c", "text": "PSH, URG" },
+      { "label": "d", "text": "RST, FIN" }
+    ],
+    "answer": "a",
+    "explanation": "コネクション確立要求を示す SYN (Synchronize) フラグと、確認応答を示す ACK(Acknowledge) フラグが使用されます。FINフラグはコネクションの切断時に、RST フラグはコネクションの強制リセット時に使用されます。"
+  },
+  {
+    "id": 29,
+    "question": "TCPのウインドウ制御のうち、受信側のバッファがあふれないように、受信側の処理能力に合わせて送信側がデータ送信量を調整する仕組みはどれか。",
+    "options": [
+      { "label": "a", "text": "輻輳制御(Congestion Control)" },
+      { "label": "b", "text": "フロー制御 (Flow Control)" },
+      { "label": "c", "text": "順序制御(Sequence Control)" },
+      { "label": "d", "text": "誤り制御 (Error Control)" }
+    ],
+    "answer": "b",
+    "explanation": "フロー制御は、受信側が自身の受信可能量(受信ウィンドウサイズ)を送信側に通知することで実現される、1対1の通信相手間での流量調整です。一方、輻輳制御は、ネットワーク全体の混雑状況を考慮して送信量を調整する仕組みです。"
+  },
+  {
+    "id": 30,
+    "question": "TCP において、ACKの受信を待たずに複数のパケットを連続して送信することで、通信路を効率的に利用しスループットを向上させる制御方式は何か。",
+    "options": [
+      { "label": "a", "text": "ストップ&ウェイト方式" },
+      { "label": "b", "text": "スライディング・ウィンドウ方式" },
+      { "label": "c", "text": "トークンパッシング方式" },
+      { "label": "d", "text": "CSMA/CD方式" }
+    ],
+    "answer": "b",
+    "explanation": "スライディング・ウィンドウ方式は、一度に送信可能なデータ量 (ウィンドウ)を定め、ACKを受け取ることでそのウィンドウを「スライド」させながら次々とデータを送信します。これにより、RTTの間もデータを送り続けることができ、高いスループットを実現します。"
+  },
+  {
+    "id": 31,
+    "question": "TCP の再送タイムアウト時間 (RTO) を決定する上で、最も重要な基準となる指標は何か。",
+    "options": [
+      { "label": "a", "text": "ネットワークの帯域幅 (Bandwidth)" },
+      { "label": "b", "text": "パケットの往復遅延時間 (RTT)" },
+      { "label": "c", "text": "輻輳ウィンドウサイズ (cwnd)" },
+      { "label": "d", "text": "OSが固定で設定している値" }
+    ],
+    "answer": "b",
+    "explanation": "TCPは、パケットの往復遅延時間(RTT: Round Trip Time)を常に計測し、その実測値に基づいてタイムアウト時間を動的に調整します。これにより、ネットワークの混雑状況に応じて適切なタイミングで再送を行い、通信効率を最適化します。"
+  },
+  {
+    "id": 32,
+    "question": "あるパケットが欠落した際、後続のパケットを受け取った受信側が、欠落したパケットを要求するために繰り返し送信する同じ確認応答 (ACK)のことを特に何と呼ぶか。",
+    "options": [
+      { "label": "a", "text": "遅延 ACK(Delayed ACK)" },
+      { "label": "b", "text": "否定応答(Negative ACK)" },
+      { "label": "c", "text": "重複 ACK (Duplicate ACK)" },
+      { "label": "d", "text": "ギーバック ACK (Piggyback ACK)" }
+    ],
+    "answer": "c",
+    "explanation": "受信側は、期待するシーケンス番号のパケットが届くまで、後続のパケットを受信すたびに同じACK番号を持つ「重複ACK」を返します。送信側は、この重複ACKを複数回受信することでパケットロスを検知します。"
+  },
+  {
+    "id": 33,
+    "question": "TCPの輻輳制御において、3回の重複ACKを受信した送信側が、タイムアウトを待たずにパケットを再送する制御を何と呼ぶか。",
+    "options": [
+      { "label": "a", "text": "高速再転送(Fast Retransmit)" },
+      { "label": "b", "text": "スロースタート (Slow Start)" },
+      { "label": "c", "text": "輻輳回避(Congestion Avoidance)" },
+      { "label": "d", "text": "タイムアウト再送 (Timeout Retransmission)" }
+    ],
+    "answer": "a",
+    "explanation": "高速再転送は、重複ACK というフィードバックを利用して、タイムアウトという長い待ち時間を回避し、より「高速」にパケットロスから回復する仕組みです。これによりスループットの低下を最小限に抑えます。"
+  },
+  {
+    "id": 34,
+    "question": "送信側が高速再転送を行うトリガーとして、重複ACKを「3回」 受信することが一般的に採用されている。これを2回ではなく3回にする主な理由は何か。",
+    "options": [
+      { "label": "a", "text": "3回にすることで、より多くのパケットを一度に再送できるため。" },
+      { "label": "b", "text": "ネットワーク内での軽微なパケットの順序入れ替えと、実際のパケットロスを区別するため。" },
+      { "label": "c", "text": "TCPヘッダの仕様で、3回以上の重複ACKしか通知できないと定められているため。" },
+      { "label": "d", "text": "タイムアウトによる再送と処理を統一するため。" }
+    ],
+    "answer": "b",
+    "explanation": "ネットワーク内では、パケットの順序が入れ替わることは稀ではありません。1回や2回の重複ACKは単なる順序入れ替えで発生することがありますが、3回となると本当にパケットが失われた可能性が高いと判断できます。無駄な再送を避けるための経験則に基づいた判断です。"
+  },
+  {
+    "id": 35,
+    "question": "TCP の輻輳制御アルゴリズムの一部で、通信開始時に輻輳ウィンドウ (cwnd) を1, 2, 4, 8... と指数関数的に増加させていき、利用可能な帯域幅を素早く探索するフェーズは何か。",
+    "options": [
+      { "label": "a", "text": "高速回復(Fast Recovery)" },
+      { "label": "b", "text": "輻輳回避(Congestion Avoidance)" },
+      { "label": "c", "text": "スロースタート (Slow Start)" },
+      { "label": "d", "text": "AIMD (Additive Increase, Multiplicative Decrease)" }
+    ],
+    "answer": "c",
+    "explanation": "スロースタートは、「スロー」という名前とは裏腹に、ACKを受信するごとにcwndを増やしていくことで、1RTT あたりにcwnd を倍増させます。これにより、未知のネットワークの容量を効率的に見つけ出します。"
+  },
+  {
+    "id": 36,
+    "question": "TCP の輻輳制御において、スロースタートから移行し、輻輳ウィンドウ (cwnd)を1RTTあたり約1MSS ずつ線形的に(加法的に) 増加させる、より慎重なフェーズは何か。",
+    "options": [
+      { "label": "a", "text": "スロースタート (Slow Start)" },
+      { "label": "b", "text": "輻輳回避(Congestion Avoidance)" },
+      { "label": "c", "text": "高速回復(Fast Recovery)" },
+      { "label": "d", "text": "初期化(Initialization)" }
+    ],
+    "answer": "b",
+    "explanation": "輻輳回避フェーズは、スロースタートである程度帯域を確保した後、ネットワークを輻輳させないように、より緩やかに送信量を増やしていく段階です。この加法的な増加はAIMDの一部です。"
+  },
+  {
+    "id": 37,
+    "question": "TCPの輻輳制御において、再送タイムアウトが発生した場合、TCPはネットワークで深刻な輻輳が起きていると判断する。このとき行われる制御として、最も適切なものはどれか。",
+    "options": [
+      { "label": "a", "text": "輻輳ウィンドウ (cwnd) を現在の半分にし、幅輻輳回避フェーズを継続する。" },
+      { "label": "b", "text": "輻輳ウィンドウ (cwnd)を1MSSにリセットし、再びスロースタートから開始する。" },
+      { "label": "c", "text": "何もせず、次のACKが届くまで待つ。" },
+      { "label": "d", "text": "送信レートを2倍にして、パケットが届くか試す。" }
+    ],
+    "answer": "b",
+    "explanation": "タイムアウトは深刻な輻輳の兆候と見なされるため、TCPは最も保守的な制御を行います。具体的には、輻輳ウィンドウを初期値の1MSSまで一気に下げ、スロースタートからやり直すことで、ネットワークへの負荷を最小限に抑えます。"
+  },
+  {
+    "id": 38,
+    "question": "トランスポート層のプロトコルで、信頼性よりも転送の速さやシンプルさを重視し、「送りっぱなし」の通信を行うコネクションレス型プロトコルはどれか。",
+    "options": [
+      { "label": "a", "text": "TCP" },
+      { "label": "b", "text": "UDP" },
+      { "label": "c", "text": "IP" },
+      { "label": "d", "text": "ICMP" }
+    ],
+    "answer": "b",
+    "explanation": "UDP(User Datagram Protocol)は、確認応答や再送制御などの信頼性確保の仕組みを持たないため、オーバーヘッドが少なく高速です。DNSやオンラインゲーム、ストリーミングなど、リアルタイム性が重視される通信で利用されます。"
+  },
+  {
+    "id": 39,
+    "question": "データ転送中に発生したビット誤りを検出するために、TCPやUDPのヘッダに含まれる16ビットのフィールドは何か。",
+    "options": [
+      { "label": "a", "text": "シーケンス番号" },
+      { "label": "b", "text": "ポート番号" },
+      { "label": "c", "text": "チェックサム" },
+      { "label": "d", "text": "ウィンドウサイズ" }
+    ],
+    "answer": "c",
+    "explanation": "チェックサムは、送信側でヘッダとデータの内容から計算された値を格納し、受信側で再計算して値が一致するかを検証することで、データが転送中に破損していないかを確認する仕組みです。"
+  },
+  {
+    "id": 40,
+    "question": "TCP ヘッダのオプションフィールドを使わない場合、ウィンドウサイズフィールドは16 ピットである。このとき表現できる最大のウィンドウサイズは何バイトか。",
+    "options": [
+      { "label": "a", "text": "255 バイト" },
+      { "label": "b", "text": "1023 バイト" },
+      { "label": "c", "text": "32767 バイト" },
+      { "label": "d", "text": "65535 バイト" }
+    ],
+    "answer": "d",
+    "explanation": "16ビットの符号なし整数で表現できる最大値は 2^16 - 1 = 65536 - 1 = 65535 です。したがって、標準のTCPヘッダで通知できる最大ウィンドウサイズは65535 バイト (約64KB) となります。"
+  },
+  {
+    "id": 41,
+    "question": "TCP/IP の各階層で扱われるデータ単位 (PDU)の名称の組み合わせとして、適切なものはどれか。",
+    "options": [
+      { "label": "a", "text": "アプリケーション層: フレーム、トランスポート層:パケット、ネットワーク層: セグメント" },
+      { "label": "b", "text": "アプリケーション層: データ、トランスポート層: セグメント、ネットワーク層: パケット" },
+      { "label": "c", "text": "アプリケーション層:パケット、トランスポート層: フレーム、ネットワーク層: データ" },
+      { "label": "d", "text": "アプリケーション層: セグメント、トランスポート層: パケット、ネットワーク層: フレーム" }
+    ],
+    "answer": "b",
+    "explanation": "一般的に、アプリケーション層で扱うデータを「データ」または「メッセージ」、トランスポート層でTCPヘッダが付加されたものを「セグメント」、ネットワーク層でIPヘッダが付加されたものを「パケット」、データリンク層でヘッダとトレーラが付加されたものを「フレーム」と呼びます。"
+  },
+  {
+    "id": 42,
+    "question": "IP ヘッダに含まれる8ビットのフィールドで、パケットがネットワーク内を無限にループすることを防ぐために、ルータを通過するたびに1ずつ減らされる値は何か。",
+    "options": [
+      { "label": "a", "text": "TTL (Time To Live)" },
+      { "label": "b", "text": "RTT (Round Trip Time)" },
+      { "label": "c", "text": "MTU (Maximum Transmission Unit)" },
+      { "label": "d", "text": "TOS (Type of Service)" }
+    ],
+    "answer": "a",
+    "explanation": "TTL はパケットの「生存時間」を意味し、この値が0になるとルータはそのパケットを破棄します。これにより、ルーティングの誤りなどで発生する無限ループを防ぎます。'tracerouteコマンドはこのTTLの仕組みを応用しています。"
+  },
+  {
+    "id": 43,
+    "question": "IP パケットを宛先に届ける過程でエラーが発生した際のエラー通知や、ネットワークの疎通確認 (ping) などに用いられる、IPプロトコルを補助するプロトコルは何か。",
+    "options": [
+      { "label": "a", "text": "ARP (Address Resolution Protocol)" },
+      { "label": "b", "text": "DHCP (Dynamic Host Configuration Protocol)" },
+      { "label": "c", "text": "ICMP (Internet Control Message Protocol)" },
+      { "label": "d", "text": "BGP (Border Gateway Protocol)" }
+    ],
+    "answer": "c",
+    "explanation": "ICMPは、IPと同じネットワーク層で機能し、IPの通信において発生する各種エラー(宛先到達不能、時間超過など)を通知したり、通信状態を診断したりする役割を担います。ping は ICMPのEcho Request/Replyメッセージを利用します。"
+  },
+  {
+    "id": 44,
+    "question": "ネットワークインターフェースカード (NIC) に製造段階で割り当てられる、世界中で一意な48ビットの物理アドレスは何か。",
+    "options": [
+      { "label": "a", "text": "IP アドレス" },
+      { "label": "b", "text": "ポート番号" },
+      { "label": "c", "text": "MACアドレス" },
+      { "label": "d", "text": "AS番号" }
+    ],
+    "answer": "c",
+    "explanation": "MACアドレス (Media Access Control Address)は、データリンク層で機能し、同一ネットワークセグメント内での通信相手を特定するために使用されます。IPアドレスがネットワーク上の「住所」なら、MACアドレスは機器固有の「識別番号」に例えられます。"
+  },
+  {
+    "id": 45,
+    "question": "同一ネットワーク内で、通信相手のIPアドレスはわかっているがMACアドレスが不明な場合に、そのIPアドレスに対応するMACアドレスを問い合わせるために使用されるプロトコルは何か。",
+    "options": [
+      { "label": "a", "text": "DNS (Domain Name System)" },
+      { "label": "b", "text": "ARP (Address Resolution Protocol)" },
+      { "label": "c", "text": "RARP (Reverse ARP)" },
+      { "label": "d", "text": "DHCP (Dynamic Host Configuration Protocol)" }
+    ],
+    "answer": "b",
+    "explanation": "ARPは、IPアドレス(ネットワーク層)とMACアドレス(データリンク層)という異なる層のアドレス情報を結びつける「アドレス解決」の役割を担います。「このIPアドレスを持っている人は、MACアドレスを教えてください」という問い合わせをブロードキャストで行います。"
+  },
+  {
+    "id": 46,
+    "question": "ネットワークに接続するコンピュータに対し、IPアドレス、サブネットマスク、デフォルトゲートウェイなどの設定情報を自動的に割り当てるプロトコルは何か。",
+    "options": [
+      { "label": "a", "text": "DNS" },
+      { "label": "b", "text": "NAT" },
+      { "label": "c", "text": "DHCP" },
+      { "label": "d", "text": "SMTP" }
+    ],
+    "answer": "c",
+    "explanation": "DHCP(Dynamic Host Configuration Protocol) を利用することで、管理者は各クライアントPCの設定を手動で行う手間を省き、IPアドレスの重複といった設定ミスを防ぐことができます。"
+  },
+  {
+    "id": 47,
+    "question": "一つのグローバルIPアドレスを、ポート番号を使い分けることで複数のプライベートIPアドレスを持つホストで共有する技術は何か。IPマスカレードとも呼ばれる。",
+    "options": [
+      { "label": "a", "text": "NAT (Network Address Translation)" },
+      { "label": "b", "text": "NAPT (Network Address Port Translation)" },
+      { "label": "c", "text": "IP トンネリング" },
+      { "label": "d", "text": "サブネット化" }
+    ],
+    "answer": "b",
+    "explanation": "NAPTは、IPアドレスの変換に加えてポート番号の変換も行うことで、1つのグローバルIPアドレスで多数のプライベートIPアドレスを持つホストが同時にインターネット接続することを可能にします。今日の家庭用ルータなどで広く使われている技術です。NATは基本的にIPアドレスを1対1で変換します。"
+  },
+  {
+    "id": 48,
+    "question": "IPv4アドレスの枯渇問題を根本的に解決するために開発された、128ビットのアドレス長を持つ次世代のインターネットプロトコルは何か。",
+    "options": [
+      { "label": "a", "text": "IPv5" },
+      { "label": "b", "text": "IPv6" },
+      { "label": "c", "text": "IPsec" },
+      { "label": "d", "text": "Mobile IP" }
+    ],
+    "answer": "b",
+    "explanation": "IPv6は、IPv4の32ビットに対して128ビットという広大なアドレス空間を持ち、事実上アドレスが枯渇することはありません。また、ヘッダの簡素化やIPsec の標準搭載などの改良も行われています。"
+  },
+  {
+    "id": 49,
+    "question": "ルーティングプロトコルを分類する際、単一の管理組織が運営するネットワーク (AS)の内部で経路情報を交換するために使用されるプロトコルの総称は何か。",
+    "options": [
+      { "label": "a", "text": "IGP (Interior Gateway Protocol)" },
+      { "label": "b", "text": "EGP (Exterior Gateway Protocol)" },
+      { "label": "c", "text": "BGP (Border Gateway Protocol)" },
+      { "label": "d", "text": "RIP (Routing Information Protocol)" }
+    ],
+    "answer": "a",
+    "explanation": "IGP は AS 内部での最適な経路選択を目的とし、RIPやOSPFなどが含まれます。一方、異なるAS間で経路情報を交換するためのプロトコルはEGPと呼ばれ、現在ではBGP が標準的に使用されています。"
+  },
+  {
+    "id": 50,
+    "question": "ルーティング方式のうち、管理者が手動でルータに経路情報を設定する方式を何と呼ぶか。",
+    "options": [
+      { "label": "a", "text": "デフォルトルーティング" },
+      { "label": "b", "text": "ダイナミックルーティング (動的ルーティング)" },
+      { "label": "c", "text": "スタティックルーティング (静的ルーティング)" },
+      { "label": "d", "text": "ポリシールーティング" }
+    ],
+    "answer": "c",
+    "explanation": "スタティックルーティングは、経路が固定されているためルータの負荷が少なくセキュリティも高いですが、ネットワーク構成の変更に手動で対応する必要があるため、管理の手間が大きいという特徴があります。"
+  },
+  {
+    "id": 51,
+    "question": "ルーティングプロトコルの一種であるRIP (Routing Information Protocol)が、最適経路を決定するために使用する指標 (メトリック)は何か。",
+    "options": [
+      { "label": "a", "text": "リンクの帯域幅(Bandwidth)" },
+      { "label": "b", "text": "宛先までの遅延時間 (Delay)" },
+      { "label": "c", "text": "経由するルータの数(ホップ数)" },
+      { "label": "d", "text": "通信経路の信頼性 (Reliability)" }
+    ],
+    "answer": "c",
+    "explanation": "RIPは、宛先ネットワークに到達するまでに経由するルータの数(ホップ数)をコストとして計算し、ホップ数が最も少ない経路を最適経路として選択します。このシンプルさが特徴ですが、必ずしも実際の通信速度を反映しないという欠点もあります。"
+  },
+  {
+    "id": 52,
+    "question": "IGP (Interior Gateway Protocol) の一種である OSPF (Open Shortest Path First) に関する説明として、適切なものはどれか。",
+    "options": [
+      { "label": "a", "text": "主にルータ間のホップ数をメトリックとして用いる、ディスタンスベクタ型のプロトコルである。" },
+      { "label": "b", "text": "各ルータがネットワーク全体の接続情報 (トポロジー)を共有し、それを基に最短経路を計算する、リンクステート型のプロトコルである。" },
+      { "label": "c", "text": "異なる AS (自律システム) 間で、ポリシーに基づいた経路情報を交換するために用いられる。" },
+      { "label": "d", "text": "管理者がすべての経路情報を手動で設定する、スタティックルーティングの一種である。" }
+    ],
+    "answer": "b",
+    "explanation": "OSPFは、各ルータがリンク (回線)の状態情報を交換しあってネットワーク全体の地図を作成し、ダイクストラ法などを用いて最短経路を計算するリンクステート型プロトコルです。コストとして帯域幅などを考慮できるため、RIPより現実に即した経路選択が可能です。"
+  },
+  {
+    "id": 53,
+    "question": "インターネットの原型となったネットワークで、1960年代に米国国防総省のプロジェクトとして開始されたものは何か。",
+    "options": [
+      { "label": "a", "text": "ETHERNET" },
+      { "label": "b", "text": "NSFNET" },
+      { "label": "c", "text": "ARPANET" },
+      { "label": "d", "text": "INTRANET" }
+    ],
+    "answer": "c",
+    "explanation": "ARPANETは、パケット交換技術を実用化した世界初の広域ネットワークであり、TCP/IP が開発・実装される舞台となりました。これが今日のインターネットの直接の起源とされています。"
+  },
+  {
+    "id": 54,
+    "question": "World Wide Web (WWW) の基本技術である HTML, HTTP, URLを考案・開発し、「WWWの父」として知られる人物は誰か。",
+    "options": [
+      { "label": "a", "text": "Vinton Cerf" },
+      { "label": "b", "text": "Robert Kahn" },
+      { "label": "c", "text": "Marc Andreessen" },
+      { "label": "d", "text": "Tim Berners-Lee" }
+    ],
+    "answer": "d",
+    "explanation": "Tim Berners-Leeは、1989年にCERN(欧州原子核研究機構)で、研究者間の情報共有を効率化するためにWWWのコンセプトを発明しました。Vinton Cerf と Robert KahnはTCP/IPの開発者、Marc Andreessen は世界初のグラフィカル Web ブラウザ Mosaic の開発者として知られます。"
+  },
+  {
+    "id": 55,
+    "question": "世界で初めてテキストと画像を同一ウィンドウ内に表示できるグラフィカル Web ブラウザとして、インターネットの普及に大きく貢献したソフトウェアは何か。",
+    "options": [
+      { "label": "a", "text": "WorldWideWeb" },
+      { "label": "b", "text": "Mosaic" },
+      { "label": "c", "text": "Netscape Navigator" },
+      { "label": "d", "text": "Internet Explorer" }
+    ],
+    "answer": "b",
+    "explanation": "1993年にNCSA (米国立スーパーコンピュータ応用研究所)で開発された Mosaicは、その直感的な操作性で非専門家にも Webの魅力を伝え、インターネットが爆発的に普及するきっかけを作りました。WorldWide Web は Tim Berners-Lee が開発した最初のブラウザです。"
+  },
+  {
+    "id": 56,
+    "question": "IPアドレスは、ネットワークを識別する「ネットワーク部」と、そのネットワーク内のホストを識別する「ホスト部」から構成される。このネットワーク部とホスト部の境界を示す 32ビットの数値は何か。",
+    "options": [
+      { "label": "a", "text": "サブネットマスク" },
+      { "label": "b", "text": "デフォルトゲートウェイ" },
+      { "label": "c", "text": "ブロードキャストアドレス" },
+      { "label": "d", "text": "MACアドレス" }
+    ],
+    "answer": "a",
+    "explanation": "サブネットマスクは、IPアドレスにAND 演算を施すことでネットワークアドレスを抽出するために使用されます。例えば255.255.255.0 のような形式で表記され、2進数で1が立っている部分がネットワーク部に対応します。"
+  },
+  {
+    "id": 57,
+    "question": "IPv4アドレスのクラス分けにおいて、第1オクテットが1~126で始まるアドレスが属するクラスはどれか。",
+    "options": [
+      { "label": "a", "text": "クラスA" },
+      { "label": "b", "text": "クラスB" },
+      { "label": "c", "text": "クラス C" },
+      { "label": "d", "text": "クラスD" }
+    ],
+    "answer": "a",
+    "explanation": "クラスAは、先頭1ビットが0で始まるアドレス範囲で、大規模ネットワーク向けに割り当てられます。第1オクテットがネットワーク部、残りの3オクテットがホスト部となり、多くのホストを収容できます。"
+  },
+  {
+    "id": 58,
+    "question": "IPv4アドレス 192.168.1.10は、どのクラスに属するか。",
+    "options": [
+      { "label": "a", "text": "クラスA" },
+      { "label": "b", "text": "クラスB" },
+      { "label": "c", "text": "クラス C" },
+      { "label": "d", "text": "クラス D" }
+    ],
+    "answer": "c",
+    "explanation": "クラスCは、第1オクテットが192~223の範囲のアドレスです。先頭3ビットが 110 で始まり、小規模なネットワーク向けに割り当てられます。'192.168.0.0/16 の範囲は、プライベートIPアドレスとして予約されています。"
+  },
+  {
+    "id": 59,
+    "question": "IPアドレスのクラス分けにおいて、マルチキャスト通信のために予約されているクラスはどれか。",
+    "options": [
+      { "label": "a", "text": "クラスA" },
+      { "label": "b", "text": "クラスB" },
+      { "label": "c", "text": "クラス C" },
+      { "label": "d", "text": "クラスD" }
+    ],
+    "answer": "d",
+    "explanation": "クラスDは、先頭4ビットが1110 で始まり、224.0.0.0 から 239.255.255.255までの範囲がマルチキャストアドレスとして定義されています。特定のグループに属する複数のホストへの同時配信などに使用されます。"
+  },
+  {
+    "id": 60,
+    "question": "あるホストが、自身が属していない別のネットワークにパケットを送信する際に、中継を依頼するために宛先として指定するルータのIPアドレスを何と呼ぶか。",
+    "options": [
+      { "label": "a", "text": "DNS サーバ" },
+      { "label": "b", "text": "DHCPサーバ" },
+      { "label": "c", "text": "デフォルトゲートウェイ" },
+      { "label": "d", "text": "ネクストホップ" }
+    ],
+    "answer": "c",
+    "explanation": "デフォルトゲートウェイは、内部ネットワークから外部ネットワークへの「出口」となるルータを指します。ホストのルーティングテーブルに個別の経路情報がない場合、パケットはすべてこのデフォルトゲートウェイに送られます。"
+  },
+  {
+    "id": 61,
+    "question": "IP ヘッダの「プロトコル」 フィールドは、そのIPパケットが内包している上位層のプロトコルを示します。TCPの場合、このフィールドに設定される値は何か。",
+    "options": [
+      { "label": "a", "text": "1" },
+      { "label": "b", "text": "6" },
+      { "label": "c", "text": "17" },
+      { "label": "d", "text": "89" }
+    ],
+    "answer": "b",
+    "explanation": "IP ヘッダのプロトコル番号は、1がICMP、6がTCP、17がUDP、89がOSPFを示すなど、IANAによって標準化されています。ルータやホストはこの番号を見て、データをどのプロトコルに渡すべきかを判断します。"
+  },
+  {
+    "id": 62,
+    "question": "ルータがパケットを転送する際、データリンク層のフレームヘッダに含まれるアドレス情報はどのように変化するか。",
+    "options": [
+      { "label": "a", "text": "送信元・宛先MACアドレス、送信元・宛先IPアドレスのすべてが書き換えられる。" },
+      { "label": "b", "text": "送信元・宛先IPアドレスのみが書き換えられ、MACアドレスは変化しない。" },
+      { "label": "c", "text": "送信元・宛先MACアドレスのみが書き換えられ、IPアドレスは変化しない。" },
+      { "label": "d", "text": "すべてのアドレス情報は書き換えられない。" }
+    ],
+    "answer": "c",
+    "explanation": "ルータはネットワークを中継するごとに、データリンク層のフレームを新しく作り直します。そのため、送信元MACアドレスはルータの送出側インターフェースのものに、宛先MACアドレスは次のホップの機器のものに書き換えられます。一方、IPアドレスは最終的な送信元と宛先を示すため、原則として書き換えられません (NAT/NAPT利用時を除く)。"
+  },
+  {
+    "id": 63,
+    "question": "通信経路上にあるルータのMTU (最大転送単位) より大きなパケットを、分割を禁止するフラグを付けて送信した場合に、ルータから送信元に返される ICMP メッセージは何か。",
+    "options": [
+      { "label": "a", "text": "Echo Reply (タイプ0)" },
+      { "label": "b", "text": "Destination Unreachable (タイプ3)" },
+      { "label": "c", "text": "Redirect (タイプ5)" },
+      { "label": "d", "text": "Time Exceeded (タイプ11)" }
+    ],
+    "answer": "b",
+    "explanation": "宛先到達不能(Destination Unreachable) メッセージには、さらに詳細な理由を示すコードが含まれます。この場合、「Fragmentation needed and DF set (分割が必要だがDFフラグがセットされている)」 (コード4) というメッセージが返され、送信元はパケットサイズを小さくする必要があることを知ります。"
+  },
+  {
+    "id": 64,
+    "question": "ソケットプログラミングにおいて、TCPを用いた信頼性のあるストリーム型通信を指定するために 'socket() システムコールの第2引数に渡す定数はどれか。",
+    "options": [
+      { "label": "a", "text": "SOCK STREAM" },
+      { "label": "b", "text": "SOCK DGRAM" },
+      { "label": "c", "text": "AF INET" },
+      { "label": "d", "text": "PFINET" }
+    ],
+    "answer": "a",
+    "explanation": "SOCKSTREAMは、順序性や信頼性が保証された双方向のバイトストリーム通信(TCP)を指定します。一方、 SOCKDGRAMは信頼性のないデータグラム通信(UDP)を指定します。AF_INET はアドレスファミリ (IPv4) を指定するもので、第1引数に使われます。"
+  },
+  {
+    "id": 65,
+    "question": "ソケットプログラミングにおいて、作成したソケットに特定のIPアドレスとポート番号を割り当てる (結びつける)ために使用するシステムコールは何か。",
+    "options": [
+      { "label": "a", "text": "'socket()" },
+      { "label": "b", "text": "'connect()" },
+      { "label": "c", "text": "'listen()" },
+      { "label": "d", "text": "'bind()" }
+    ],
+    "answer": "d",
+    "explanation": "bind()は、特にサーバ側のプログラムで、クライアントからの接続を特定のポートで待ち受けるために使用されます。このシステムコールにより、ソケットが具体的なネットワークアドレスを持つことになります。"
+  },
+  {
+    "id": 66,
+    "question": "IP ヘッダのフォーマットにおいて、ヘッダ部分に誤りがないかを検出するためのチェックサムは、ヘッダのどの部分を対象に計算されるか。",
+    "options": [
+      { "label": "a", "text": "IP ヘッダ全体" },
+      { "label": "b", "text": "IP ヘッダと TCP/UDP データ部分" },
+      { "label": "c", "text": "TCP/UDPヘッダのみ" },
+      { "label": "d", "text": "IP アドレス部分のみ" }
+    ],
+    "answer": "a",
+    "explanation": "IPv4ヘッダのチェックサムは、ヘッダ部分のみを計算対象とします。ルータを通過するたびにTTLが変化するため、チェックサムは各ルータで再計算されます。なお、データ部分の誤り検出は上位層のTCPやUDPのチェックサムが担当します。"
+  },
+  {
+    "id": 67,
+    "question": "現在のインターネットにおいて、異なるAS (自律システム) 間で経路情報を交換するために、事実上の標準として利用されている EGP (Exterior Gateway Protocol)は何か。",
+    "options": [
+      { "label": "a", "text": "RIP" },
+      { "label": "b", "text": "OSPF" },
+      { "label": "c", "text": "BGP" },
+      { "label": "d", "text": "IGRP" }
+    ],
+    "answer": "c",
+    "explanation": "BGP (Border Gateway Protocol)は、単純なコスト計算だけでなく、各ASのルーティングポリシー (どの経路を使うか、どの経路情報を広告するかなど)に基づいた複雑な経路制御が可能なため、インターネット規模での経路交換プロトコルとして利用されています。"
+  },
+  {
+    "id": 68,
+    "question": "RFC (Request for Comments) を発行し、インターネット技術の標準化プロセスを担っている中心的な組織は何か。",
+    "options": [
+      { "label": "a", "text": "IETF (Internet Engineering Task Force)" },
+      { "label": "b", "text": "IEEE (Institute of Electrical and Electronics Engineers)" },
+      { "label": "c", "text": "W3C (World Wide Web Consortium)" },
+      { "label": "d", "text": "ISO (International Organization for Standardization)" }
+    ],
+    "answer": "a",
+    "explanation": "IETFは、インターネットで使われるプロトコルなどの技術仕様を策定する、ボランティアベースのオープンな標準化団体です。IEEEはLAN (イーサネットやWi-Fiなど)の標準化、W3CはWWW 関連技術 (HTMLやCSSなど)の標準化で知られています。"
+  }
+]
