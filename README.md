@@ -1,1 +1,4 @@
 # computer_network_quiz_game
+コンピュータネットワークの勉強用クイズゲームです
+
+Twitter
